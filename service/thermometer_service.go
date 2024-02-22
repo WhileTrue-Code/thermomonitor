@@ -13,7 +13,10 @@ type Service struct {
 }
 
 func CreateThermometer(thermometer *model.Thermometer) {
-
+	thermometer.ID = uuid.NullUUID{
+		UUID:  uuid.New(),
+		Valid: false,
+	}
 }
 
 func DeleteThermometer(thermometerID uuid.NullUUID) {
