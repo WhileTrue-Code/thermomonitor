@@ -5,7 +5,7 @@ import "github.com/google/uuid"
 type Thermometer struct {
 	ID        uuid.NullUUID `json:"id,omitempty"`
 	Name      string        `json:"name,omitempty"`
-	DeletedAt string        `json:"deletedAt,omitempty"`
+	DeletedAt *int64        `json:"deletedAt,omitempty"`
 }
 
 type ThermometerState struct {
