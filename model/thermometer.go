@@ -3,8 +3,9 @@ package model
 import "github.com/google/uuid"
 
 type Thermometer struct {
-	ID   uuid.NullUUID `json:"id,omitempty"`
-	Name string        `json:"name,omitempty"`
+	ID        uuid.NullUUID `json:"id,omitempty"`
+	Name      string        `json:"name,omitempty"`
+	DeletedAt string        `json:"deletedAt,omitempty"`
 }
 
 type ThermometerState struct {
